@@ -157,6 +157,30 @@
     margin-top: 0px;
 }
 
+.show {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.show > h2 {
+    width: 100%;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 47px;
+    font-size: 20px;
+    margin-bottom: 12px;
+    background-color: #FF5A5F;
+    border-radius: 50px;
+    color: white;
+    cursor: pointer;
+}
 /*
 justify-content
 align-items
