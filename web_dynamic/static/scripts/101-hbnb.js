@@ -49,7 +49,7 @@ $(document).ready(() => {
       success: function (data) {
         $('article').remove();
         $(data).each(function (index) {
-          $('.places').append('<article><div class="title_box"><h2>' + data[index].name + '</h2><div class="price_by_night">$' + data[index].price_by_night + '</div></div><div class="information"><div class="max_guest">' + data[index].max_guest + ' Guests</div><div class="number_rooms">' + data[index].number_rooms + ' Bedrooms</div><div class="number_bathrooms">' + data[index].number_bathrooms + ' Bathrooms</div></div><div class="description">' + data[index].description + '</div><div class="amenities"><h2>Amenities</h2><ul><li class="tv">TV</li><li class="wifi">Wifi</li><li class="pets">Pet Friendly</li></ul><div class=reviews><h2>3 Reviews</h2><ul><li><h3>From Kamie Nean the 6th September 2017</h3><p>I felt like a Queen during my stay!</p></li></ul></div></div></article>');
+          $('.places').append('<article><div class="title_box"><h2>' + data[index].name + '</h2><div class="price_by_night">$' + data[index].price_by_night + '</div></div><div class="information"><div class="max_guest">' + data[index].max_guest + ' Guests</div><div class="number_rooms">' + data[index].number_rooms + ' Bedrooms</div><div class="number_bathrooms">' + data[index].number_bathrooms + ' Bathrooms</div></div><div class="description">' + data[index].description + '</div><div class="amenities"><h2>Amenities</h2><ul><li class="tv">TV</li><li class="wifi">Wifi</li><li class="pets">Pet Friendly</li></ul><div class=reviews><div class="show"><h2>Reviews</h2><span class="btn">Show</span></div></div></div></article>');
         });
       }
     });
@@ -75,7 +75,20 @@ $.ajax({
   contentType: 'application/json',
   success: function (data) {
     $(data).each(function (index) {
-      $('.places').append('<article><div class="title_box"><h2>' + data[index].name + '</h2><div class="price_by_night">$' + data[index].price_by_night + '</div></div><div class="information"><div class="max_guest">' + data[index].max_guest + ' Guests</div><div class="number_rooms">' + data[index].number_rooms + ' Bedrooms</div><div class="number_bathrooms">' + data[index].number_bathrooms + ' Bathrooms</div></div><div class="description">' + data[index].description + '</div><div class="amenities"><h2>Amenities</h2><ul><li class="tv">TV</li><li class="wifi">Wifi</li><li class="pets">Pet Friendly</li></ul><div class=reviews><h2>3 Reviews</h2><ul><li><h3>From Kamie Nean the 6th September 2017</h3><p>I felt like a Queen during my stay!</p></li></ul></div></div></article>');
+      $('.places').append('<article><div class="title_box"><h2>' + data[index].name + '</h2><div class="price_by_night">$' + data[index].price_by_night + '</div></div><div class="information"><div class="max_guest">' + data[index].max_guest + ' Guests</div><div class="number_rooms">' + data[index].number_rooms + ' Bedrooms</div><div class="number_bathrooms">' + data[index].number_bathrooms + ' Bathrooms</div></div><div class="description">' + data[index].description + '</div><div class="amenities"><h2>Amenities</h2><ul><li class="tv">TV</li><li class="wifi">Wifi</li><li class="pets">Pet Friendly</li></ul><div class="reviews"><div class="show"><h2>Reviews</h2><span class="btn"><p>Show</p><p style="display: none">Hide</p></span></div></div></div></article>');
+    });
+    $('.btn').click(function () {
+      if ($('.btn').text() === 'ShowShowShowShowShowShowShowShowShowShowShowShowShowShowShowShowShowShowShow') {
+        $('.btn').text('Hide');
+        $(data).each(function (index) {
+          $.get('http://127.0.0.1:5001/api/v1/places/' + data[index].id + '/reviews', function (data) {
+            $('.reviews').append('<ul><li><h3>From Zenkaizer the review</h3><p>' + data[0].text + '</p></li></ul>');
+          });
+        });
+      } else {
+        $('.btn').text('Show');
+        $('.reviews ul').remove();
+      }
     });
   }
 });
