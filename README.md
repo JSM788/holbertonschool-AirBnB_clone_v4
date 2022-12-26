@@ -161,6 +161,5 @@ David Ovalle - [Github](https://github.com/Nukemenonai) / [Twitter](https://twit
 Juan Salinas - [Github](https://github.com/JSM788) / [Twitter](https://twitter.com/twitter.com/SalinasJuan__)
 Paolo Abarca - [Github](https://github.com/paolo-abarca) / [Twitter](https://twitter.com/)
 
-Second part of Airbnb: Joann Vuong
 ## License
 Public Domain. No copy write protection. 
