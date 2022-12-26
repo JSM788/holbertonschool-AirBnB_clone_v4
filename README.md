@@ -158,8 +158,6 @@ Alexa Orrico - [Github](https://github.com/alexaorrico) / [Twitter](https://twit
 Jennifer Huang - [Github](https://github.com/jhuang10123) / [Twitter](https://twitter.com/earthtojhuang)  
 Jhoan Zamora - [Github](https://github.com/jzamora5) / [Twitter](https://twitter.com/JhoanZamora10)  
 David Ovalle - [Github](https://github.com/Nukemenonai) / [Twitter](https://twitter.com/disartDave)
-Juan Salinas - [Github](https://github.com/JSM788) / [Twitter](https://twitter.com/twitter.com/SalinasJuan__)
-Paolo Abarca - [Github](https://github.com/paolo-abarca) / [Twitter](https://twitter.com/)
 
 ## License
 Public Domain. No copy write protection. 
